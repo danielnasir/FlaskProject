@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for u in users %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ u.author }}</a>
+              <small class="text-muted">{{ u.date_posted }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ u.title }}</a></h2>
+            <p class="article-content">{{ u.content }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
