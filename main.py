@@ -76,7 +76,7 @@ def login():
         flash('Login Unsuccessful. Please check Full name and Password', 'danger')
     return render_template('login.html', title='Login', form=form)
 
-class User(db.Model, UserMixin):
+class User():
     def __init__(self, id_AI, full_name, password, real_id):
         self.id_AI = id_AI
         self.full_name = full_name
