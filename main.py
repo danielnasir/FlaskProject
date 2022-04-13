@@ -9,7 +9,7 @@ from wtforms.validators import DataRequired, Length, EqualTo, ValidationError
 
 app = Flask(__name__)
 global user_id
-logging.basicConfig(filename='log', level=logging.DEBUG, format='%(asctime)s')
+logging.basicConfig(filename='log', level=logging.DEBUG, format='%(asctime)s::%(levelname)s:%(message)s')
 
 #connection to the data base
 def dbconn():
